@@ -1,0 +1,118 @@
+@font-face {
+  font-family: PPHatton;
+  src: url(/fonts/PPHatton-Light.woff2);
+}
+
+@font-face {
+  font-family: PPCharlevoix;
+  font-weight: regular;
+  src: url(/fonts/PPCharlevoix-Regular.woff2);
+}
+@font-face {
+  font-family: PPCharlevoix;
+  font-weight: bold;
+  src: url(/fonts/PPCharlevoix-Bold.woff2);
+}
+
+
+:root {
+  --c-blue-deep: #000b30;
+  --c-blue-medium: #202b4b;
+  --c-blue-light: #304266;
+  --c-gold: #ecd5a3;
+  --c-white: #FDFDFD;
+  --c-black: #171717;
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: initial;
+}
+
+ul{
+  list-style-type: none;
+}
+
+body{
+  font-family: PPCharlevoix;
+  font-weight: regular;
+  background-color: var(--c-blue-light);
+  color: white;
+  line-height: 150%;
+}
+
+
+h1{
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  color: transparent;
+  touch-action: none;
+  pointer-events: none;
+}
+
+.txt{
+
+  &--highlight{
+    font-weight: bold;
+    color: var(--c-gold);
+  }
+}
+
+.tags{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.topSection{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 48px;
+  padding: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+
+  &__scroll{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &__logo{
+    position: relative;
+
+    img{
+      width: 100%;
+      max-width: 240px;
+    }
+
+    &::before{
+      content: "";
+      width: 2px;
+      height: 30vh;
+      background-image: url(./assets/separator-gradient.svg);
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: calc(100% + 32px);
+      left: 50%;
+    }
+  }
+}
+
