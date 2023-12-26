@@ -1,7 +1,10 @@
 <script setup>
 import VButton from './components/VButton.vue'
 import VTag from './components/VTag.vue'
+import VSkillBox from './components/VSkillBox.vue'
 import VGalaxyCanvas from './components/VGalaxyCanvas.vue'
+import VProject from './components/VProject.vue'
+import VGallery from './components/VGallery.vue'
 </script>
 
 <template>
@@ -49,89 +52,172 @@ import VGalaxyCanvas from './components/VGalaxyCanvas.vue'
       </p>
     </section>
 
-    <section>
-      <h2>Who am I?</h2>
-      <p>I’m Evo, also known as Nell Maissin, a 21 year old graduate in Web Design. I enjoy experimenting with code in order to make visually interesting experiences, as well as writing stories and creating universes which reflect upon spiritual and psychological questions. My strength lies in my adaptability, my ability to quickly handle tasks by myself and my attention to detail.</p>
-      <ul class="skills">
-        <li class="skill">
-          <img src="" alt="">
-          <h3>Vue.js</h3>
-          <p>I learnt Vue.js 3 Composition mostly by myself by integrating it into personal projects.</p>
-        </li>
-        <li class="skill">
-          <img src="" alt="">
-          <h3>Three.js</h3>
-          <p>I followed Bruno Simon’s “Three.js Journey” and used what I had learnt in generative design experiments and in web games.</p>
-        </li>
-        <li class="skill">
-          <img src="" alt="">
-          <h3>Adobe suite</h3>
-          <p>I enjoy working with After Effects and I’m comfortable with Photoshop, Illustrator and Premiere Pro. </p>
-        </li>
-        <li class="skill">
-          <img src="" alt="">
-          <h3>Figma</h3>
-          <p>I have been using Figma for 2+ years and earned some professional experience by working with it in a design team during my 3 months internship at Neopixl.</p>
-        </li>
+    <section class="section">
+      <div class="content m-space64">
+        <div class="profile m-space32">
+          <div class="profile__img">
+            <img src="./assets/profile-pic@1x.webp" alt="" srcset="./assets/profile-pic@1x.webp 1x, ./assets/profile-pic@2x.webp 2x">
+          </div>
+          <h2 class="title title--big title--who">Who am I?</h2>
+          <p>I’m Evo, also known as Nell Maissin, a 21 year old graduate in Web Design. I enjoy experimenting with code in order to make <span class="txt--highlight">visually interesting experiences</span>, as well as writing stories and creating universes which reflect upon spiritual and psychological questions. My strength lies in my <span class="txt--highlight">adaptability</span>, my ability to quickly <span class="txt--highlight">handle tasks by myself</span> and my attention to <span class="txt--highlight">detail</span>.</p>
+        </div>
+        <ul class="skills m-space32">
+          <VSkillBox
+            :title="'Vue.js'"
+            :text="'I learnt Vue.js 3 Composition mostly by myself by integrating it into personal projects.'"
+            :svg="'vue'"
+          />
+          <VSkillBox
+            :title="'Three.js'"
+            :text="'I followed Bruno Simon’s “Three.js Journey” and used what I had learnt in generative design experiments and in web games.'"
+            :svg="'three'"
+          />
+          <VSkillBox
+            :title="'Adobe suite'"
+            :text="'I enjoy working with After Effects and I’m comfortable with Photoshop, Illustrator and Premiere Pro.'"
+            :svg="'adobe'"
+          />
+          <VSkillBox
+            :title="'Figma'"
+            :text="'I have been using Figma for 2+ years and earned some professional experience by working with it in a design team during my 3 months internship at Neopixl.'"
+            :svg="'figma'"
+          />
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="title title--huge">Projects</h2>
+      <ul class="m-space128">
+        <VProject
+          :title="'BOSTROM'"
+          :description="'Graduation work. The point & click visual novel in which YOU have the power to change the story.'"
+          :link="'http://nell-maissin.be/projets/tfe'"
+          :linkCS="'#'"
+          :img="'project-bostrom'"
+          :imgList="[
+              {
+                  name: 'project-img-bostrom-1',
+                  type: 'video',
+                  video: 'project-video-bostrom.mp4'
+              },
+              {
+                  name: 'project-img-bostrom-2',
+                  type: 'image'
+              },
+              {
+                  name: 'project-img-bostrom-3',
+                  type: 'image'
+              }
+          ]"
+          :tags="[
+            'vue.js',
+            'three.js',
+            'illustrations',
+            'narrative design'
+          ]"
+        />
+        <VProject
+          :title="'The Pixel Museum'"
+          :description="'A project made by a team of six. The goal was to make an interactive museum in which people would draw on parts of the frames in order to make artworks together.'"
+          :link="'https://melvyn-ulens.be/projets/ilab/'"
+          :linkCS="'#'"
+          :img="'project-ilab'"
+          :imgList="[
+              {
+                  name: 'project-img-ilab-1',
+                  type: 'video',
+                  video: 'project-video-ilab.mp4'
+              },
+              {
+                  name: 'project-img-ilab-2',
+                  type: 'image'
+              },
+              {
+                  name: 'project-img-ilab-3',
+                  type: 'image'
+              }
+          ]"
+          :tags="[
+            'php',
+            'pixel art (background)',
+            'html canvas',
+            'js'
+          ]"
+        />
+        <VProject
+          :title="'CommiMe'"
+          :description="'Discover the prototype of a brand new platform for digital art commissions.'"
+          :link="'http://nell-maissin.be/projets/tfa'"
+          :linkCS="'http://nell-maissin.be/projets/tfa/case-study.html'"
+          :img="'project-tfa'"
+          :imgList="[
+              {
+                  name: 'project-img-tfa-1',
+                  type: 'image',
+              },
+              {
+                  name: 'project-img-tfa-2',
+                  type: 'image'
+              },
+              {
+                  name: 'project-img-tfa-3',
+                  type: 'image'
+              }
+          ]"
+          :tags="[
+            'greensock',
+            'ux',
+            'ui',
+            'figma'
+          ]"
+        />
       </ul>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>BOSTROM</h3>
-        <p>Graduation work. The point & click visual novel in which YOU have the power to change the story.</p>
-        <ul class="tagList">
-          <li class="tag">vue.js</li>
-          <li class="tag">three.js</li>
-          <li class="tag">illustrations</li>
-          <li class="tag">narrative design</li>
-        </ul>
-        <ul class="links">
-          <li>
-            <VButton
-              :text="'Visit'"
-              :link="'http://nell-maissin.be/projets/tfe'"
-              :arrow="true"
-            />
-          </li>
-          <li>
-            <VButton
-              :text="'Case Study'"
-              :link="'http://nell-maissin.be/projets/tfe'"
-              :arrow="true"
-            />
-          </li>
-        </ul>
-      </div>
-      <div class="project">
-        <h3>The Pixel Museum</h3>
-        <p>A project made by a team of six. The goal was to make an interactive museum in which people would draw on parts of the frames in order to make artworks together.</p>
-        <ul>
-          <li>php</li>
-          <li>pixel art (background)</li>
-          <li>html canvas</li>
-          <li>js</li>
-        </ul>
-      </div>
-      <div class="project">
-        <h3>CommiMe</h3>
-        <p>Discover the prototype of a brand new platform for digital art commissions.</p>
-        <ul class="tagList">
-          <li class="tag">greensock</li>
-          <li class="tag">ux</li>
-          <li class="tag">ui</li>
-          <li class="tag">figma</li>
-        </ul>
+    <section class="section">
+      <h2 class="title title--huge">Gallery</h2>
+      <div class="content">
+        <VGallery
+          :imgList="[
+            {
+              name: 'gallery/commi-helio',
+              type: 'image'
+            },
+            {
+              name: 'gallery/commi-nime',
+              type: 'image'
+            },
+            {
+              name: 'gallery/commi-py',
+              type: 'image'
+            },
+            {
+              name: 'gallery/cover',
+              type: 'video',
+              video: 'gallery/cover-speedpaint.mp4'
+            },
+            {
+              name: 'gallery/elyoflowers',
+              type: 'image'
+            },
+            {
+              name: 'gallery/illu-nova',
+              type: 'image'
+            },
+            {
+              name: 'gallery/mnemosyne',
+              type: 'video',
+              video: 'gallery/mnemosyne-video.mp4'
+            },
+          ]"
+          :fullGallery="true"
+        />
       </div>
     </section>
 
     <section>
-      <h2>Gallery</h2>
-    </section>
-
-    <section>
-      <h2>Let's work together!</h2>
+      <h2 class="title title--huge">Let's work together!</h2>
       <VButton
         :text="'nellmaissin@gmail.com'"
         :link="'mailto:nellmaissin@gmail.be'"

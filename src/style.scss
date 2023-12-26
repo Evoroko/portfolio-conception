@@ -14,7 +14,6 @@
   src: url(/fonts/PPCharlevoix-Bold.woff2);
 }
 
-
 :root {
   --c-blue-deep: #000b30;
   --c-blue-medium: #202b4b;
@@ -44,9 +43,13 @@ body{
   font-weight: regular;
   background-color: var(--c-blue-light);
   color: white;
-  line-height: 150%;
+  line-height: 1.5;
 }
 
+
+
+@import url(./style/spaces.scss);
+@import url(./style/titles.scss);
 
 h1{
   position: absolute;
@@ -72,6 +75,10 @@ h1{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  &--left{
+    justify-content: left;
+  }
 }
 
 .topSection{
@@ -116,3 +123,27 @@ h1{
   }
 }
 
+
+
+.content{
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.profile{
+  
+
+  &__img{
+    padding: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--c-gold);
+    width: 100%;
+    max-width: 390px;
+    box-sizing: border-box;
+    margin: auto;
+
+    img{
+      width: 100%;
+    }
+  }
+}

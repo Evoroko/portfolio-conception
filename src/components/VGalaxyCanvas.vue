@@ -1,5 +1,7 @@
 <template>
-    <canvas class="galaxycanvas"></canvas>
+    <div class="galaxycanvas__container">
+        <canvas class="galaxycanvas"></canvas>
+    </div>
 </template>
 
 <script setup>
@@ -119,25 +121,29 @@ onMounted(() => {
 
 <style lang="scss">
 .galaxycanvas{
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 100%;
     background-color: var(--c-blue-medium);
     z-index: -1;
     text-align: center;
-    // background: linear-gradient(360deg, #0D0D0D 0%, rgba(13, 13, 13, .8) 30%, rgba(13, 13, 13, 0) 60%), linear-gradient(90deg, #0D0D0D 0%, rgba(13, 13, 13, 0) 19.58%, rgba(13, 13, 13, 0) 88.33%, #0D0D0D 100%);
 
-
-    &::after{
-        content: "";
+    &__container{
         position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 100px;
-        height: 100px;
-        z-index: 10;
-        background-color: aqua;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background: linear-gradient(180deg, rgb(48, 66, 102, 0.0) 50%, rgb(48, 66, 102) 95%);
+        }
     }
 }
 </style>

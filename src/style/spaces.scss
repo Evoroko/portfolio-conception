@@ -1,0 +1,33 @@
+.m-space12{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.m-space16{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.m-space32{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.m-space64{
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.m-space128{
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
+}
+
+.section{
+  margin-bottom: 160px;
+}

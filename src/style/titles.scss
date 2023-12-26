@@ -1,0 +1,44 @@
+.title{
+    font-family: PPHatton;
+    font-weight: 200;
+    line-height: 1.2;
+
+    &--small{
+        font-family: PPCharlevoix;
+        font-weight: regular;
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: .15rem;
+    }
+  
+    &--big{
+      font-size: 49px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  
+    &--who{
+      font-size: 61px;
+    }
+  
+    &--huge{
+      font-size: 49px;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #ECD5A3 25.69%, rgba(253, 253, 253, 0.00) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 64px;
+
+      
+
+      @media (min-width: 370px){
+        font-size: 61px;
+      }
+  
+      @media (min-width: 990px){
+        font-size: 144px;
+      }
+    }
+  }
