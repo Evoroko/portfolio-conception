@@ -235,6 +235,10 @@
             }
         }
 
+        .tags{
+            justify-content: end;
+        }
+
     }
 }
 </style>

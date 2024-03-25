@@ -251,7 +251,7 @@
                 background-size: 10%;
             }
             .galleryMin__el:last-of-type{
-                grid-column: span 1;
+                grid-column: span 3;
             }
         }
 
@@ -259,14 +259,14 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             
             .galleryMin__el:last-of-type{
-                grid-column: span 2;
+                grid-column: span 4;
             }
             
         }
         @media (min-width: 800px) {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             .galleryMin__el:last-of-type{
-                grid-column: span 1;
+                grid-column: span 3;
             }
         }
         @media (min-width: 992px) {
@@ -280,7 +280,7 @@
                 grid-column: span 2;
             }
             .galleryMin__el:last-of-type{
-                grid-column: span 1;
+                grid-column: span 4;
             }
         }
     }

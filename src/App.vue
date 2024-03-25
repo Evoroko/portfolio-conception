@@ -34,7 +34,7 @@ import VGallery from './components/VGallery.vue'
               <img src="./assets/logo.svg" alt="logo Evo">
             </div>
           </div>
-          <p class="topSection__text">Hi! I’m Evo, a <span class="txt--highlight">Transmedia Web Design</span> graduate currently pursuing a Master’s degree in <span class="txt--highlight">Transmedia Architecture</span> at the Haute École Albert Jacquard.</p>
+          <p class="topSection__text">Hi! I’m Evo, a <span class="txt--highlight">Transmedia Web Design</span> graduate from the Haute École Albert Jacquard currently looking for work.</p>
           <ul class="tags">
             <VTag>ux / ui design</VTag>
             <VTag>web dev</VTag>
@@ -71,7 +71,7 @@ import VGallery from './components/VGallery.vue'
             <div class="grid-start-01 grid-end m-space32 profile__txt grid">
               <h2 class="title title--big title--who grid-start-02 grid-end-07">Who am&nbsp;I?</h2>
               <div class="profile__txtcontent grid-start-07 grid-end-12">
-                <p>I’m Evo, also known as Nell Maissin, a 21 year old graduate in Web Design. I enjoy experimenting with code in order to make <span class="txt--highlight">visually interesting experiences</span>, as well as writing stories and creating universes which reflect upon spiritual and psychological questions. My strength lies in my <span class="txt--highlight">adaptability</span>, my ability to quickly <span class="txt--highlight">handle tasks by myself</span> and my attention to <span class="txt--highlight">detail</span>.</p>
+                <p>I’m Evo, also known as Nell Maissin, a 22 year old graduate in Web Design. I enjoy experimenting with code in order to make <span class="txt--highlight">visually interesting experiences</span>, as well as writing stories and creating universes which reflect upon spiritual and psychological questions. My strength lies in my <span class="txt--highlight">adaptability</span>, my ability to quickly <span class="txt--highlight">handle tasks by myself</span> and my attention to <span class="txt--highlight">detail</span>.</p>
               </div>
             </div>
           </div>
@@ -200,6 +200,38 @@ import VGallery from './components/VGallery.vue'
               'figma'
             ]"
           />
+          <VProject
+            :title="'Trust Again'"
+            :description="'The story of two people learning to trust their peers again after having faced traumatic events. (beta of a visual novel made with Ren\'Py)'"
+            :link="'http://nell-maissin.be/projets/TrustAgain/'"
+            :linkCS="'http://nell-maissin.be/projets/TrustAgain/trust-again-case-study.pdf'"
+            :img="'project-trust-again'"
+            :imgAlt="'Trust Again\'s promotional image.'"
+            :imgList="[
+                {
+                    name: 'project-img-trust-again-1',
+                    type: 'image',
+                    alt: 'Screenshot of one of the dialogs.'
+                },
+                {
+                    name: 'project-img-trust-again-2',
+                    type: 'image',
+                    alt: 'Main menu.'
+                },
+                {
+                    name: 'project-img-trust-again-3',
+                    type: 'image',
+                    alt: 'Screenshots of one of the game\'s CG.'
+                }
+            ]"
+            :tags="[
+              'ren\'py',
+              'narrative design',
+              'illustration',
+              'ergodic literature'
+            ]"
+            :rightSide="true"
+          />
         </ul>
       </section>
   
@@ -254,11 +286,6 @@ import VGallery from './components/VGallery.vue'
                 type: 'video',
                 video: 'gallery/mnemosyne-video.mp4',
                 alt: 'Video made for a one week project around a fictional game.'
-              },
-              {
-                name: 'gallery/owen-sprite',
-                type: 'image',
-                alt: 'Screenshot of a visual novel I am currently making.'
               },
             ]"
             :fullGallery="true"
