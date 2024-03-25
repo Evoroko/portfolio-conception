@@ -21,14 +21,20 @@
   overflow: hidden;
   transition: .4s;
   z-index: 2;
+  font-size: 13px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
 
+  @media (min-width: 350px) {
+    font-size: 16px;
+  }
+
   &--wide{
     width: 100%;
+    font-size: 16px;
   }
 
   &__text{
@@ -42,16 +48,14 @@
   }
 
   &__hover{
-    width: 30px;
-    height: 30px;
+    width: 100%;
+    height: 100%;
     background-color: var(--c-white);
-    border-radius: 50%;
     position: absolute;
-    bottom: -20px;
-    left: -20px;
     transition: .3s;
     z-index: -1;
     transform-origin: center left;
+    clip-path: circle(0% at 0% 100%);
   }
 
   &:hover{
@@ -62,7 +66,7 @@
     }
 
     .button__hover{
-        transform: scale(13);
+        clip-path: circle(150% at 0% 100%);
         transition: .5s;
     }
   }

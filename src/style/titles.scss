@@ -15,6 +15,11 @@
       font-size: 49px;
       text-transform: uppercase;
       text-align: center;
+
+      @media (min-width: 990px){
+        font-size: 61px;
+        text-align: left;
+      }
     }
   
     &--who{
@@ -31,14 +36,48 @@
       text-align: center;
       margin-bottom: 64px;
 
-      
-
       @media (min-width: 370px){
         font-size: 61px;
       }
   
       @media (min-width: 990px){
         font-size: 144px;
+      }
+    }
+
+    
+
+    &--nomargin{
+      margin-bottom: 0;
+    }
+
+
+    &--left{
+      @media (min-width: 992px){
+        position: absolute;
+        top: -80px;
+        left: 8px;
+        z-index: 1;
+        touch-action: none;
+        user-select: none;
+        pointer-events: none;
+      }
+      @media (min-width: 1200px){
+        left: calc((100vw - 1200px) / 2 - 8px);
+      }
+    }
+    &--right{
+      @media (min-width: 992px){
+        position: absolute;
+        top: -96px;
+        right: 16px;
+        z-index: 1;
+        touch-action: none;
+        user-select: none;
+        pointer-events: none;
+      }
+      @media (min-width: 1200px){
+        right: calc((100vw - 1200px) / 2);
       }
     }
   }

@@ -2,32 +2,129 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  @media (min-width: 992px) {
+    display: block;
+    gap: 0;
+  }
 }
 
 .m-space16{
   display: flex;
   flex-direction: column;
   gap: 16px;
+  @media (min-width: 992px) {
+    display: block;
+    gap: 0;
+  }
+}
+
+.m-space24{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media (min-width: 992px) {
+    display: block;
+    gap: 0;
+  }
 }
 
 .m-space32{
   display: flex;
   flex-direction: column;
   gap: 32px;
+  @media (min-width: 992px) {
+    display: block;
+    gap: 0;
+  }
 }
 
 .m-space64{
   display: flex;
   flex-direction: column;
   gap: 64px;
+  @media (min-width: 992px) {
+    display: block;
+    gap: 0;
+  }
 }
 
 .m-space128{
   display: flex;
   flex-direction: column;
   gap: 128px;
+  @media (min-width: 992px) {
+    display: block;
+    gap: 0;
+  }
 }
 
 .section{
   margin-bottom: 160px;
+
+  &:last-of-type{
+    margin-bottom: 0;
+    padding-bottom: 80px;
+  }
+  
+  @media (min-width: 992px) {
+    display: block;
+    gap: 0;
+
+    margin-bottom: 320px;
+  }
+}
+
+@media (min-width: 992px) {
+  
+
+.d-space12{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d-space16{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.d-space24{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.d-space32{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.d-space64{
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.d-space96{
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.d-space128{
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
+}
+
+.d-space192{
+  display: flex;
+  flex-direction: column;
+  gap: 192px;
+}
+
+
 }

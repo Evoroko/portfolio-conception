@@ -1,6 +1,6 @@
 <template>
     <div class="galaxycanvas__container">
-        <canvas class="galaxycanvas"></canvas>
+        <canvas class="galaxycanvas galaxycanvas--hide"></canvas>
     </div>
 </template>
 
@@ -126,12 +126,17 @@ onMounted(() => {
     background-color: var(--c-blue-medium);
     z-index: -1;
     text-align: center;
+    clip-path: circle(150% at 50% 100%); // canvas affiché
+    transition: 1.5s;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
 
     &__container{
-        position: absolute;
-        top: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
+        position: absolute;
         z-index: -1;
 
         &::after{
@@ -142,8 +147,13 @@ onMounted(() => {
             width: 100%;
             height: 100%;
             z-index: 10;
-            background: linear-gradient(180deg, rgb(48, 66, 102, 0.0) 50%, rgb(48, 66, 102) 95%);
+            background: linear-gradient(180deg, rgb(48, 66, 102, 0.0) 50%, rgb(48, 66, 102) 100%);
         }
+    }
+
+    &--hide{
+        transition: .5s;
+        clip-path: circle(0% at 50% 100%); // canvas caché
     }
 }
 </style>
