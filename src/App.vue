@@ -34,14 +34,13 @@ import VGallery from './components/VGallery.vue'
               <img src="./assets/logo.svg" alt="logo Evo">
             </div>
           </div>
-          <p class="topSection__text">Hi! I’m Evo, a <span class="txt--highlight">Transmedia Web Design</span> graduate from the Haute École Albert Jacquard currently looking for work.</p>
+          <p class="topSection__text">Hi! I’m a <span class="txt--highlight">Transmedia Web Design</span> graduate from the Haute École Albert Jacquard currently working for <a class="basic-link" target="_blank" href="https://www.intech.lu/fr/">InTech</a> as a software engineer.</p>
           <ul class="tags">
+            <VTag>front-end dev</VTag>
             <VTag>ux / ui design</VTag>
-            <VTag>web dev</VTag>
             <VTag>narrative writing</VTag>
             <VTag>illustrations</VTag>
             <VTag>motion design</VTag>
-            <VTag>crafting</VTag>
           </ul>
           <p class="topSection__scroll">
             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,11 +70,16 @@ import VGallery from './components/VGallery.vue'
             <div class="grid-start-01 grid-end m-space32 profile__txt grid">
               <h2 class="title title--big title--who grid-start-02 grid-end-07">Who am&nbsp;I?</h2>
               <div class="profile__txtcontent grid-start-07 grid-end-12">
-                <p>I’m Evo, also known as Nell Maissin, a 22 year old graduate in Web Design. I enjoy experimenting with code in order to make <span class="txt--highlight">visually interesting experiences</span>, as well as writing stories and creating universes which reflect upon spiritual and psychological questions. My strength lies in my <span class="txt--highlight">adaptability</span>, my ability to quickly <span class="txt--highlight">handle tasks by myself</span> and my attention to <span class="txt--highlight">detail</span>.</p>
+                <p>I’m Nell Maissin, a 23 year old working for InTech as a software engineer. I am currently on a mission for POST Luxembourg for their banking app as a front-end developer. As a Transmedia Web Design graduate, I enjoy experimenting with code in order to make <span class="txt--highlight">visually interesting experiences</span>, as well as writing stories and creating universes which reflect upon spiritual and psychological questions. My strength lies in my <span class="txt--highlight">adaptability</span>, my ability to quickly <span class="txt--highlight">handle tasks by myself</span> and my attention to <span class="txt--highlight">detail</span>.</p>
               </div>
             </div>
           </div>
           <ul class="skills m-space32 grid-start-02 grid-end-12">
+            <VSkillBox
+              :title="'Angular'"
+              :text="'My front-end job at InTech is mostly Angular mixed with TypeScript with a bit of Spring Boot manipulation for the back-end part.'"
+              :svg="'angular'"
+            />
             <VSkillBox
               :title="'Vue.js'"
               :text="'I learnt Vue.js 3 Composition mostly by myself by integrating it into personal projects.'"
@@ -85,6 +89,11 @@ import VGallery from './components/VGallery.vue'
               :title="'Three.js'"
               :text="'I followed Bruno Simon’s “Three.js Journey” and used what I had learnt in generative design experiments and in web games.'"
               :svg="'three'"
+            />
+            <VSkillBox
+              :title="'Design System'"
+              :text="'Every aspect of the creation of design systems has been touched by my hands — from the Figma design and components, to integration in Stencil, and finally, the integration of the Stencil components in a real project.'"
+              :svg="'design-system'"
             />
             <VSkillBox
               :title="'Adobe suite'"
@@ -271,21 +280,31 @@ import VGallery from './components/VGallery.vue'
                 type: 'image',
                 alt: 'User interface made for the daily UI n°2.'
               },
-              {
-                name: 'gallery/elyoflowers',
-                type: 'image',
-                alt: 'Drawing of my character Elyo behind flowers.'
-              },
-              {
-                name: 'gallery/illu-nova',
-                type: 'image',
-                alt: 'Drawing of my character Nova for a light study.'
-              },
+              // {
+              //   name: 'gallery/elyoflowers',
+              //   type: 'image',
+              //   alt: 'Drawing of my character Elyo behind flowers.'
+              // },
+              // {
+              //   name: 'gallery/illu-nova',
+              //   type: 'image',
+              //   alt: 'Drawing of my character Nova for a light study.'
+              // },
               {
                 name: 'gallery/mnemosyne',
                 type: 'video',
                 video: 'gallery/mnemosyne-video.mp4',
                 alt: 'Video made for a one week project around a fictional game.'
+              },
+              {
+                name: 'gallery/tighnari',
+                type: 'image',
+                alt: 'Illustration of Tighnari from Genshin Impact.'
+              },
+              {
+                name: 'gallery/hafez-redesign',
+                type: 'image',
+                alt: 'An original character I made based on the universe of Genshin Impact.'
               },
             ]"
             :fullGallery="true"
@@ -305,6 +324,3 @@ import VGallery from './components/VGallery.vue'
   </main>
   
 </template>
-
-<style scoped>
-</style>

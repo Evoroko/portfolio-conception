@@ -41,6 +41,12 @@
         &--figma{
             background-image: url(../assets/figma.svg);
         }
+        &--angular{
+            background-image: url(../assets/angular.svg);
+        }
+        &--design-system{
+            background-image: url(../assets/design-system.svg);
+        }
     }
 }
 </style>
