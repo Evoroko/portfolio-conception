@@ -38,8 +38,8 @@
         &--three{
             background-image: url(../assets/three.svg);
         }
-        &--figma{
-            background-image: url(../assets/figma.svg);
+        &--react{
+            background-image: url(../assets/react.svg);
         }
         &--angular{
             background-image: url(../assets/angular.svg);

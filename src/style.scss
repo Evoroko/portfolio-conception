@@ -1,17 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 @font-face {
-  font-family: PPHatton;
-  src: url(/fonts/PPHatton-Light.woff2);
+  font-family: Bodoni Moda;
 }
 
 @font-face {
-  font-family: PPCharlevoix;
-  font-weight: regular;
-  src: url(/fonts/PPCharlevoix-Regular.woff2);
-}
-@font-face {
-  font-family: PPCharlevoix;
-  font-weight: bold;
-  src: url(/fonts/PPCharlevoix-Bold.woff2);
+  font-family: "DM Sans", sans-serif;
 }
 
 :root {
@@ -39,7 +33,7 @@ ul{
 }
 
 body{
-  font-family: PPCharlevoix;
+  font-family: "DM Sans";
   font-weight: regular;
   background-color: var(--c-blue-light);
   color: white;

@@ -5,6 +5,24 @@ import VSkillBox from './components/VSkillBox.vue'
 import VGalaxyCanvas from './components/VGalaxyCanvas.vue'
 import VProject from './components/VProject.vue'
 import VGallery from './components/VGallery.vue'
+import { ref } from 'vue'
+
+const getAge = () => {
+  const today = new Date();
+  const birthDate = new Date(2002, 0, 26);
+
+  let years = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  const dayDiff = today.getDate() - birthDate.getDate();
+
+  // If birthday has not occurred this year yet, subtract 1
+  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+    years--;
+  }
+  return years;
+}
+
+const age = ref(getAge());
 </script>
 
 <template>
@@ -70,15 +88,20 @@ import VGallery from './components/VGallery.vue'
             <div class="grid-start-01 grid-end m-space32 profile__txt grid">
               <h2 class="title title--big title--who grid-start-02 grid-end-07">Who am&nbsp;I?</h2>
               <div class="profile__txtcontent grid-start-07 grid-end-12">
-                <p>I’m Nell Maissin, a 23 year old working for InTech as a software engineer. I am currently on a mission for POST Luxembourg for their banking app as a front-end developer. As a Transmedia Web Design graduate, I enjoy experimenting with code in order to make <span class="txt--highlight">visually interesting experiences</span>, as well as writing stories and creating universes which reflect upon spiritual and psychological questions. My strength lies in my <span class="txt--highlight">adaptability</span>, my ability to quickly <span class="txt--highlight">handle tasks by myself</span> and my attention to <span class="txt--highlight">detail</span>.</p>
+                <p>I’m Nell Maissin, a {{ age }} year old working for InTech as a software engineer. I am currently on a mission for a major actor of Luxembourg, as I am working for their banking app as a front-end developer. As a Transmedia Web Design graduate, I enjoy experimenting with code in order to make <span class="txt--highlight">visually interesting experiences</span>, as well as writing stories and creating universes which reflect upon spiritual and psychological questions. My strength lies in my <span class="txt--highlight">adaptability</span>, my ability to quickly <span class="txt--highlight">handle tasks by myself</span> and my attention to <span class="txt--highlight">detail</span>.</p>
               </div>
             </div>
           </div>
           <ul class="skills m-space32 grid-start-02 grid-end-12">
             <VSkillBox
               :title="'Angular'"
-              :text="'My front-end job at InTech is mostly Angular mixed with TypeScript with a bit of Spring Boot manipulation for the back-end part.'"
+              :text="'My front-end job at InTech is mostly Angular mixed with TypeScript and a bit of local Spring Boot manipulation for the back-end part.'"
               :svg="'angular'"
+            />
+            <VSkillBox
+              :title="'React.js & React Native'"
+              :text="'I have been working on a rework from scratch of a banking app in my job, both for the web and mobile part.'"
+              :svg="'react'"
             />
             <VSkillBox
               :title="'Vue.js'"
@@ -99,11 +122,6 @@ import VGallery from './components/VGallery.vue'
               :title="'Adobe suite'"
               :text="'I enjoy working with After Effects and I’m comfortable with Photoshop, Illustrator and Premiere Pro.'"
               :svg="'adobe'"
-            />
-            <VSkillBox
-              :title="'Figma'"
-              :text="'I have been using Figma for 2+ years and earned some professional experience by working with it in a design team during my 3 months internship at Neopixl.'"
-              :svg="'figma'"
             />
           </ul>
         </div>
